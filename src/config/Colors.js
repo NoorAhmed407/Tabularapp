@@ -1,0 +1,18 @@
+export default Colors = {
+  white: '#FFFFFF',
+  primary: '#fc0',
+  secondary: '#333',
+  textDarkColor: '#061326',
+  textLightColor: '#667085',
+  gray: '#CCD4E2',
+  lightPurple: '#F4E6FA',
+  darkGray: '#7B6F72',
+  textDarkGray: '#656565',
+  lightGray: '#9D9D9D',
+  textLightGray: '#696969',
+  textGray: '#A7A7A7',
+  placeholderGray: '#B2B7C2',
+  backgroundGray: '#F7F8F8',
+  lighGray: '#D3D3D3',
+  black: '#000',
+};
