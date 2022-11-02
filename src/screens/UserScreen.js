@@ -40,6 +40,10 @@ export default function UserScreen() {
   
 
   const searchResults = () => {
+    if(!search){
+      setTableData([]);
+      return Alert.alert('Alert', 'Please enter the username');
+    }
     var searchItemIndex = jsonData.findIndex(e => e.name === search);
     if(searchItemIndex == -1){
       setTableData([]);
