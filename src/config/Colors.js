@@ -5,6 +5,7 @@ export default Colors = {
   textDarkColor: '#061326',
   textLightColor: '#667085',
   gray: '#CCD4E2',
+  red: '#FF0000',
   lightPurple: '#F4E6FA',
   darkGray: '#7B6F72',
   textDarkGray: '#656565',

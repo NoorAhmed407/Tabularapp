@@ -4,7 +4,7 @@ import { Colors, Images, Metrix } from '../config'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Button, TextField } from '../components';
 import { fonts } from '../config/Constants';
-import { Table, Row, Rows } from 'react-native-table-component';
+import { Table, Row, Rows, Col } from 'react-native-table-component';
 let json = require('../config/leaderboard.json');
 
 export default function UserScreen() {
@@ -35,6 +35,7 @@ export default function UserScreen() {
   const searchResults = () => {
     var searchItemIndex = jsonData.findIndex(e => e.name === search);
     if(searchItemIndex == -1){
+      setTableData([]);
       return Alert.alert('Error', 'This user name does not exist!');
     }
     let filter = jsonData.slice(0,searchItemIndex > 9 ? 9 : 10).map((val,ind)=>[val?.name, ind + 1, val?.bananas, searchItemIndex == ind ? 'yes' : 'no']);
@@ -86,7 +87,7 @@ export default function UserScreen() {
               <View style={{marginVertical: Metrix.VerticalSize(10)}}>
                 <Table borderStyle={{borderWidth: 2, borderColor: Colors.primary}}>
                   <Row data={tableHead} style={styles.head} textStyle={styles.text}/>
-                  <Rows data={tableData} textStyle={{...styles.text, color: Colors.black}} />
+                  <Rows data={tableData} textStyle={{...styles.text, fontFamily: fonts.Regular, color: Colors.black}} />
                 </Table>
               </View>
             
